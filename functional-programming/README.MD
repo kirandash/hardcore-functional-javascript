@@ -25,6 +25,7 @@
 ## 2 Currying
 - Currying - A fn that remembers it's argument
 - Takes  a fn of multiple arguments and perform tasks one arg at a time
+- `const curry = f => x => y => f(x, y)` or use from ramda
 
 ### 2.1 Properties, arguments and currying
 - Properties
@@ -48,3 +49,17 @@
 ### 2.4 Curry - problems and solutions
 - use currying to simplify code
 - Codepen: https://codepen.io/drboolean/pen/OJJOQMx
+
+### 2.5 Partial application vs currying
+- `partial` is used to call an uncurried function
+
+## 3 Composition
+### 3.1 Composition
+- Helps us deal with **nested function** in a cleaner way by ordering them from right to left
+- returns a fn
+- Executes fn from **right to left**
+- `const compose = (f, g) => x => f(g(x))` or use from ramda
+- Ex: `const shoutFirstLetter = compose(first, compose(exclaim, toUpper))`
+- Compose is associative
+- use compose from ramda to handle multiple arguments
+- Ex: `const shoutFirstLetter = compose(first, exclaim, toUpper)`
