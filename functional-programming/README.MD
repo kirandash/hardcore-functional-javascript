@@ -63,3 +63,6 @@
 - Compose is associative
 - use compose from ramda to handle multiple arguments
 - Ex: `const shoutFirstLetter = compose(first, exclaim, toUpper)`
+
+### 3.2 Creating programs with Curry and Compose
+- We can pass curried fn as an argument to compose
