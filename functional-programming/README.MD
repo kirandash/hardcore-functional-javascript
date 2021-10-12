@@ -75,3 +75,8 @@
 - Console logging inside of composed function
 - helpful for debugging
 - `const log = R.curry((tag, x) => (console.log(tag, x), x))`
+
+### 3.5 Compose - Practice
+-  `_.prop` returns value for a specific key in object
+- `_.prop('in_stock', reversed_cars) . ==> reversed_cars.in_stock ===> reversed_cars["in_stock"]`
+- `compose(map(f), map(g)) == map(compose(f, g))`
