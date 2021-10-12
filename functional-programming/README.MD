@@ -72,4 +72,6 @@
 - With compose we will have to use utility functions from ramda
 
 ### 3.4 Logging in composition
-
+- Console logging inside of composed function
+- helpful for debugging
+- `const log = R.curry((tag, x) => (console.log(tag, x), x))`
