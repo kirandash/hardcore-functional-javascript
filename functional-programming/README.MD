@@ -66,3 +66,10 @@
 
 ### 3.2 Creating programs with Curry and Compose
 - We can pass curried fn as an argument to compose
+
+### 3.3 Composition is dot chaining
+- Compose is basically dot chaining functions
+- With compose we will have to use utility functions from ramda
+
+### 3.4 Logging in composition
+
