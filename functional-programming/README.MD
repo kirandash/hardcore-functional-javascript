@@ -14,7 +14,7 @@
 
 ### 1.3 Pure functions checklist
 
-### 1.4 Pure functions advantages
+### 1.4 Pure functions advantages   
 - Reliable
 - Portable
 - Reusable
@@ -80,3 +80,14 @@
 -  `_.prop` returns value for a specific key in object
 - `_.prop('in_stock', reversed_cars) . ==> reversed_cars.in_stock ===> reversed_cars["in_stock"]`
 - `compose(map(f), map(g)) == map(compose(f, g))`
+
+## 4 Functors
+- Things are not always chainable out of the box. We will create a **BOX**. We will use functors to make this better and save state for chaining.
+
+### 4.1 Creating the identity Functor
+- Box functor calls the functions
+- In code, we just chain with .map which will call the Box functor
+- Box:
+    - map fn: run the function on the value and store it back in box (accumulating current state)
+    - fold fn: run the function on the value and return it instead of keeping in box
+    - toString: convert current value to string to log
