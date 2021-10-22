@@ -91,3 +91,8 @@
     - map fn: run the function on the value and store it back in box (accumulating current state)
     - fold fn: run the function on the value and return it instead of keeping in box
     - toString: convert current value to string to log
+
+### 4.2 Refactoring to Dot chaining
+- Functor basically captures compose
+- alternate to using compose:
+    - `const compose = (f, g) => x => Box(x).map(g).fold(f);`
