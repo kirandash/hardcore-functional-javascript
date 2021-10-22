@@ -96,3 +96,7 @@
 - Functor basically captures compose
 - alternate to using compose:
     - `const compose = (f, g) => x => Box(x).map(g).fold(f);`
+
+### 4.3 Functor - Practice
+- For problems(3rd) with multiple variables we will end up with Box nesting.
+- To simplify this we need a flat box architecture which is solved by **Monads**
