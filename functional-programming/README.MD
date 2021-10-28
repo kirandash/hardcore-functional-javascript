@@ -4,6 +4,7 @@
 ### 1.1 Intro
 - [Slides](https://docs.google.com/presentation/d/1nj5xmsHeJh-6RdjLs1190Hwl8smclvFLePqPCTVsrYw/edit#slide=id.g338d117be_040)
 - [Personal Copy](https://docs.google.com/presentation/d/1_WbSJ2ViglL1q9eO2RIeWgWMSSYu-GFBgWedJvk42Jc/edit#slide=id.g338d117be_040)
+- [Course Code](https://github.com/FrontendMasters/hardcore-functional-js-v2)
 
 ### 1.2 Mathematical, Pure functions
 - Functions:
@@ -100,3 +101,5 @@
 ### 4.3 Functor - Practice
 - For problems(3rd) with multiple variables we will end up with Box nesting.
 - To simplify this we need a flat box architecture which is solved by **Monads**
+
+### 4.4 Adding Chain for Nested Functors

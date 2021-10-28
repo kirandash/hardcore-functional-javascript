@@ -3,6 +3,7 @@ const QUnit = require("qunit")
 const Box = x =>
 ({
   map: f => Box(f(x)),
+  chain: f => f(x),
   fold: f => f(x),
   toString: () => `Box(${x})`
 })
@@ -76,15 +77,26 @@ const applyDiscount = (price, discount) =>
         .fold(savings => cents - (cents * savings))
     )
 
+console.log("Ex3: Apply discount", String(applyDiscount('$5.00', '20%')))
+
 // Alternate - refactor with few lines
-const applyDiscountR = (price, discount) => 
+const applyDiscountR_ = (price, discount) => 
   Box(moneyToFloat(price))
     .fold(cents => 
       Box(percentToFloat(discount))
         .fold(savings => cents - (cents * savings))
     )
 
-console.log("Ex3: Apply discount", String(applyDiscount('$5.00', '20%')))
+const applyDiscountR = (price, discount) => 
+    Box(moneyToFloat(price))
+      .chain(cents => 
+        Box(percentToFloat(discount))
+          .map(savings => cents - (cents * savings)) // Chain expects: Box(Box(x))
+      ).fold(x => x) 
+
+// with promise: then will auto flatten for you if result is nested 
+// but if not nested, it will just return the result
+
 
 console.log("Ex3: Apply discount refactored", String(applyDiscountR('$5.00', '20%')))
 
